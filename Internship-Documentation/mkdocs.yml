@@ -1,0 +1,67 @@
+site_name: Harini D — AI & ML Portfolio
+site_description: Premium internship portfolio of Harini D — MLOps Open Source Contributor, AI & ML Student at iGradAI Labs.
+site_author: Harini D
+
+nav:
+  - 🏠 Home: index.md
+  - 👩‍💻 About Me: about-me.md
+  - 🏢 Internship Overview: internship-overview.md
+  - 📖 Learning Journey: learning-journey.md
+  - 🌍 Open Source: open-source.md
+  - 💻 Projects: projects.md
+  - ☁️ Cloud Learning: cloud-learning.md
+  - ⚙️ GitHub Workflow: github-devops.md
+  - 🏆 Certifications: certifications.md
+  - 📑 Documentation: documentation.md
+  - 📊 Achievements: achievements.md
+  - 📞 Contact: contact.md
+  - 📄 Conclusion: conclusion.md
+
+theme:
+  name: material
+  custom_dir: ../overrides
+  language: en
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - content.code.copy
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/portfolio.js
+
+docs_dir: docs
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - admonition
+  - tables

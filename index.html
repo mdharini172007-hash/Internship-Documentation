@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harini D — AI & ML Portfolio</title>
+  <meta name="description" content="Premium interactive portfolio of Harini D — AI & ML Student, MLOps Open Source Contributor, GitHub Developer at iGradAI Labs." />
+  <meta name="theme-color" content="#050816" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══ LOADING SCREEN ══ -->
+  <div id="loader" aria-live="polite" aria-label="Loading">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <svg viewBox="0 0 80 80" fill="none" aria-hidden="true">
+          <circle cx="40" cy="40" r="36" stroke="url(#lg1)" stroke-width="2"/>
+          <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="22" font-family="Space Grotesk" font-weight="700">HD</text>
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#4F46E5"/>
+              <stop offset="1" stop-color="#06B6D4"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <p class="loader-name">Harini D</p>
+      <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+      <p class="loader-tag">Crafting your experience…</p>
+    </div>
+  </div>
+
+  <!-- ══ CUSTOM CURSOR ══ -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ══ BACKGROUND CANVAS ══ -->
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
+
+  <!-- ══ AURORA LAYERS ══ -->
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora-band aurora-1"></div>
+    <div class="aurora-band aurora-2"></div>
+    <div class="aurora-band aurora-3"></div>
+  </div>
+
+  <!-- ══ AMBIENT BLOBS ══ -->
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+  <div class="blob blob-3" aria-hidden="true"></div>
+
+  <!-- ══ NAVIGATION ══ -->
+  <header class="nav-wrap" role="banner">
+    <nav class="top-nav glass" aria-label="Primary navigation">
+      <a href="#hero" class="brand" aria-label="Harini D home">
+        <span class="brand-logo">HD</span>
+      </a>
+      <div class="nav-links" role="list">
+        <a href="#about" role="listitem">About</a>
+        <a href="#timeline" role="listitem">Journey</a>
+        <a href="#projects" role="listitem">Projects</a>
+        <a href="certifications.html" role="listitem">Certs</a>
+        <a href="#contact" role="listitem">Contact</a>
+      </div>
+      <a href="Internship-Documentation/docs/index.md" class="nav-cta" aria-label="View Documentation">Docs</a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ══ MOBILE DRAWER ══ -->
+  <div id="mobile-menu" class="mobile-drawer glass" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="drawer-close" aria-label="Close menu">✕</button>
+    <div class="drawer-links">
+      <a href="#about">About</a>
+      <a href="#timeline">Journey</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="drawer-overlay" aria-hidden="true"></div>
+
+  <main>
+    <!-- ══ HERO ══ -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <div class="hero-text-block">
+          <div class="hero-eyebrow reveal-up">
+            <span class="eyebrow-dot"></span>
+            MLOps · Open Source · Cloud · AI
+          </div>
+          <h1 class="hero-name reveal-up" style="transition-delay:0.1s">
+            <span class="name-line">Harini</span>
+            <span class="name-line gradient-text">D</span>
+          </h1>
+          <p class="hero-role reveal-up" style="transition-delay:0.2s">
+            Artificial Intelligence &amp; Machine Learning Student
+          </p>
+          <p class="hero-college reveal-up" style="transition-delay:0.26s">
+            K.S.Rangasamy College of Technology
+          </p>
+          <div class="typing-wrap reveal-up" style="transition-delay:0.32s" aria-live="polite">
+            <span class="typing-prefix">I am a </span>
+            <span class="typing-text" id="typing-el"></span>
+            <span class="typing-cursor" aria-hidden="true">|</span>
+          </div>
+          <div class="hero-btns reveal-up" style="transition-delay:0.4s">
+            <a href="Internship-Documentation/docs/index.md" class="btn btn-primary magnetic">
+              <span class="btn-inner">View Documentation</span>
+              <span class="btn-glow"></span>
+            </a>
+            <a href="https://github.com/Hemamahe07" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic">
+              <span class="btn-inner">GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/harini-dhandapani-9a367737b/" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic">
+              <span class="btn-inner">LinkedIn</span>
+            </a>
+            <a href="#" class="btn btn-ghost magnetic" aria-label="Download Resume">
+              <span class="btn-inner">⬇ Resume</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile Photo + Orbit -->
+        <div class="hero-visual reveal-zoom" style="transition-delay:0.2s">
+          <div class="orbit-system" id="orbit" aria-label="Technology orbit">
+            <!-- Profile -->
+            <div class="profile-card" id="profile-card">
+              <div class="profile-glow-ring"></div>
+              <div class="profile-img-wrap">
+                <img src="pic.png" onerror="this.onerror=null;this.src='assets/harini.svg'" alt="Harini D — AI & ML Student" class="profile-img" />
+              </div>
+              <div class="profile-status">
+                <span class="status-dot"></span>Open to Work
+              </div>
+            </div>
+            <!-- Orbit Ring 1 -->
+            <div class="orbit-ring orbit-ring-1" aria-hidden="true">
+              <div class="orbit-icon" data-tip="Git" style="--i:0"><span>Git</span></div>
+              <div class="orbit-icon" data-tip="GitHub" style="--i:1"><span>GH</span></div>
+              <div class="orbit-icon" data-tip="HTML" style="--i:2"><span>HTML</span></div>
+              <div class="orbit-icon" data-tip="CSS" style="--i:3"><span>CSS</span></div>
+            </div>
+            <!-- Orbit Ring 2 -->
+            <div class="orbit-ring orbit-ring-2" aria-hidden="true">
+              <div class="orbit-icon" data-tip="JavaScript" style="--i:0"><span>JS</span></div>
+              <div class="orbit-icon" data-tip="AWS Cloud" style="--i:1"><span>AWS</span></div>
+              <div class="orbit-icon" data-tip="MkDocs" style="--i:2"><span>MkD</span></div>
+              <div class="orbit-icon" data-tip="JSON" style="--i:3"><span>JSON</span></div>
+              <div class="orbit-icon" data-tip="GitHub Pages" style="--i:4"><span>Pages</span></div>
+              <div class="orbit-icon" data-tip="Linux Foundation" style="--i:5"><span>LF</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="hero-stats reveal-up" style="transition-delay:0.5s">
+        <div class="stat-item">
+          <strong class="counter" data-target="1">0</strong>
+          <span>Month Internship</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <strong class="counter" data-target="3">0</strong>
+          <span>Major Projects</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <strong class="counter" data-target="2">0</strong>
+          <span>LF Certificates</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <strong class="counter" data-target="1">0</strong>
+          <span>Merged PR</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <strong class="counter" data-target="1">0</strong>
+          <span>GitHub Pages Site</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <strong class="counter" data-target="1">0</strong>
+          <span>Open Source Contribution</span>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ══ ABOUT ══ -->
+    <section id="about" class="section about-section">
+      <div class="section-header">
+        <span class="section-tag">01 · About</span>
+        <h2 class="section-title">Built around curiosity,<br /><span class="gradient-text">disciplined growth</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="glass-card about-card-main reveal-left">
+          <div class="card-glow-corner"></div>
+          <h3>Hello, I'm Harini</h3>
+          <p>I am currently studying <strong>Artificial Intelligence and Machine Learning</strong> at K.S.Rangasamy College of Technology. I am passionate about AI, machine learning, cloud computing, MLOps, DevOps, and collaborative software development.</p>
+          <p>This internship at <strong>iGradAI Labs Private Limited</strong> strengthened my practical understanding of open-source collaboration, documentation practices, GitHub workflows, AWS fundamentals, and deployment through GitHub Pages.</p>
+          <div class="about-tags">
+            <span>AI / ML</span><span>MLOps</span><span>Cloud</span>
+            <span>Open Source</span><span>GitHub</span><span>DevOps</span>
+          </div>
+        </div>
+        <div class="about-side reveal-right">
+          <div class="glass-card info-card">
+            <h4>Education</h4>
+            <p><strong>K.S.Rangasamy College of Technology</strong></p>
+            <p class="muted">Artificial Intelligence and Machine Learning</p>
+          </div>
+          <div class="glass-card info-card">
+            <h4>Internship</h4>
+            <p><strong>iGradAI Labs Private Limited</strong></p>
+            <p class="muted">MLOps Open-Source Contributor · 1 Month</p>
+            <p class="muted">Mentor: Santhosh N C</p>
+          </div>
+          <div class="glass-card info-card">
+            <h4>Goal</h4>
+            <p class="muted">Build a strong career in AI, cloud, and MLOps by contributing to impactful products and continuously learning modern technology.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ TIMELINE ══ -->
+    <section id="timeline" class="section timeline-section">
+      <div class="section-header">
+        <span class="section-tag">02 · Journey</span>
+        <h2 class="section-title">One month.<br /><span class="gradient-text">Infinite learning.</span></h2>
+      </div>
+      <div class="timeline-track">
+        <div class="timeline-line" aria-hidden="true"></div>
+        <div class="timeline-item reveal-left">
+          <div class="tl-marker"><span>W1</span></div>
+          <div class="glass-card tl-card">
+            <div class="tl-week">Week 1</div>
+            <h3>GitHub Learning</h3>
+            <p>Mastered repository management, branching, pull requests, merges, commit best practices, and collaborative GitHub workflows through hands-on exercises and GitHub Skills.</p>
+            <div class="tl-tags"><span>Git</span><span>GitHub</span><span>Branches</span><span>PRs</span></div>
+          </div>
+        </div>
+        <div class="timeline-item right reveal-right">
+          <div class="tl-marker"><span>W2</span></div>
+          <div class="glass-card tl-card">
+            <div class="tl-week">Week 2</div>
+            <h3>Open Source Contribution</h3>
+            <p>Contributed to the First Contributions repository. Experienced the full pull request lifecycle from fork to merge. Earned Linux Foundation certifications on GitHub and Open Source development.</p>
+            <div class="tl-tags"><span>Open Source</span><span>First PR</span><span>Linux Foundation</span></div>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left">
+          <div class="tl-marker"><span>W3</span></div>
+          <div class="glass-card tl-card">
+            <div class="tl-week">Week 3</div>
+            <h3>Website Development</h3>
+            <p>Designed and deployed a premium portfolio experience using HTML, CSS, JavaScript, MkDocs, and GitHub Pages. Built the DevSecOps Periodic Table interactive website.</p>
+            <div class="tl-tags"><span>HTML</span><span>CSS</span><span>JS</span><span>GitHub Pages</span><span>MkDocs</span></div>
+          </div>
+        </div>
+        <div class="timeline-item right reveal-right">
+          <div class="tl-marker"><span>W4</span></div>
+          <div class="glass-card tl-card">
+            <div class="tl-week">Week 4</div>
+            <h3>AWS Cloud Learning</h3>
+            <p>Explored AWS Cloud concepts including EC2, Auto Scaling Groups, Elastic Load Balancers, VPC networking, S3, IAM, and cloud architecture through AWS Cloud Quest.</p>
+            <div class="tl-tags"><span>AWS</span><span>EC2</span><span>Cloud Quest</span><span>IAM</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ PROJECTS ══ -->
+    <section id="projects" class="section projects-section">
+      <div class="section-header">
+        <span class="section-tag">03 · Projects</span>
+        <h2 class="section-title">Work that<br /><span class="gradient-text">speaks for itself</span></h2>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project-card tilt-card glass-card reveal-up">
+          <div class="project-card-inner">
+            <div class="project-preview proj-preview-1" aria-hidden="true">
+              <div class="preview-dots"><span></span><span></span><span></span></div>
+              <div class="preview-lines">
+                <div></div><div></div><div></div><div></div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-chips">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span>
+              </div>
+              <h3>Premium Portfolio Website</h3>
+              <p>Designed a high-end interactive portfolio experience focused on storytelling, motion design, glassmorphism, and polished visual aesthetics with award-winning quality.</p>
+              <a href="#" class="proj-link magnetic">View Project →</a>
+            </div>
+            <div class="project-card-glow"></div>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card glass-card featured reveal-up">
+          <div class="project-card-inner">
+            <div class="project-preview proj-preview-2" aria-hidden="true">
+              <div class="preview-dots"><span></span><span></span><span></span></div>
+              <div class="preview-branch" aria-hidden="true">
+                <div class="branch-line"></div>
+                <div class="branch-node"></div>
+                <div class="branch-fork"></div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-chips">
+                <span>Git</span><span>GitHub</span><span>Open Source</span>
+              </div>
+              <h3>First Open Source Contribution</h3>
+              <p>Experienced the full GitHub contribution workflow — forking, branching, committing, and creating a pull request on the First Contributions repository. PR successfully merged.</p>
+              <a href="#" class="proj-link magnetic">View on GitHub →</a>
+            </div>
+            <div class="project-card-glow"></div>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card glass-card reveal-up">
+          <div class="project-card-inner">
+            <div class="project-preview proj-preview-3" aria-hidden="true">
+              <div class="preview-dots"><span></span><span></span><span></span></div>
+              <div class="preview-grid" aria-hidden="true">
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-chips">
+                <span>HTML</span><span>CSS</span><span>JSON</span><span>DevSecOps</span>
+              </div>
+              <h3>DevSecOps Periodic Table</h3>
+              <p>Built an interactive website inspired by the DevSecOps Periodic Table using JSON-based dynamic data loading, animated hover effects, responsive layouts, and GitHub Pages deployment.</p>
+              <a href="#" class="proj-link magnetic">View Project →</a>
+            </div>
+            <div class="project-card-glow"></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══ CERTIFICATIONS ══ -->
+    <section id="certifications" class="section certs-section">
+      <div class="section-header">
+        <span class="section-tag">04 · Certifications</span>
+        <h2 class="section-title">Verified<br /><span class="gradient-text">credentials</span></h2>
+        <p class="section-sub">Completed during internship at <strong>iGradAI Labs Private Limited</strong> — strengthening knowledge in GitHub workflows, Open Source Development, and Cloud Computing.</p>
+        <div class="cert-badge-pills reveal-up">
+          <span>🏅 Linux Foundation Certified</span>
+          <span>🏅 Open Source Development</span>
+          <span>🏅 GitHub Foundations</span>
+          <span>🏅 AWS Cloud Quest</span>
+        </div>
+      </div>
+
+      <!-- Cert Stats -->
+      <section class="cert-stats reveal-up">
+        <div class="cstat"><strong>3</strong><span>Certificates Earned</span></div>
+        <div class="cstat-div"></div>
+        <div class="cstat"><strong>2</strong><span>Organizations</span></div>
+        <div class="cstat-div"></div>
+        <div class="cstat"><strong>2026</strong><span>Year Completed</span></div>
+        <div class="cstat-div"></div>
+        <div class="cstat"><strong>100%</strong><span>Completion Rate</span></div>
+      </section>
+
+      <!-- CERT CARDS -->
+      <div class="premium-certs-grid three-cols">
+
+        <!-- CERT 1 -->
+        <article class="premium-cert-card tilt-card reveal-up" data-cert="0">
+          <div class="pcert-glow"></div>
+          <div class="pcert-status">✓ Completed</div>
+          <div class="pcert-thumb" role="button" tabindex="0" aria-label="View LFD102 Certificate" data-cert="0">
+            <img src="assets/certificates/linux-foundation-lfd102.jpg"
+                 onerror="this.src='assets/certificates/placeholder.svg'"
+                 alt="LFD102 Certificate" loading="lazy" />
+            <div class="pcert-thumb-overlay"><span>🔍 View Full Certificate</span></div>
+          </div>
+          <div class="pcert-body">
+            <div class="pcert-org">
+              <div class="pcert-org-logo">LF</div>
+              <div>
+                <div class="pcert-org-name">The Linux Foundation</div>
+                <div class="pcert-code">LFD102</div>
+              </div>
+            </div>
+            <h3 class="pcert-title">A Beginner's Guide to Open Source Software Development</h3>
+            <div class="pcert-meta">
+              <div><span class="pcert-label">Student</span><span class="pcert-val">Harini D</span></div>
+              <div><span class="pcert-label">Completed</span><span class="pcert-val">June 18, 2026</span></div>
+              <div><span class="pcert-label">Credential ID</span><span class="pcert-val mono">LF-lunhmt6o9w</span></div>
+            </div>
+            <div class="pcert-tags"><span>Open Source</span><span>Linux</span><span>GitHub</span></div>
+            <button class="pcert-btn" data-cert="0">View Certificate ↗</button>
+          </div>
+        </article>
+
+        <!-- CERT 2 -->
+        <article class="premium-cert-card tilt-card reveal-up" data-cert="1" style="transition-delay:0.12s">
+          <div class="pcert-glow"></div>
+          <div class="pcert-status">✓ Completed</div>
+          <div class="pcert-thumb" role="button" tabindex="0" aria-label="View LFD140 Certificate" data-cert="1">
+            <img src="assets/certificates/linux-foundation-lfd140.jpg"
+                 onerror="this.src='assets/certificates/placeholder.svg'"
+                 alt="LFD140 Certificate" loading="lazy" />
+            <div class="pcert-thumb-overlay"><span>🔍 View Full Certificate</span></div>
+          </div>
+          <div class="pcert-body">
+            <div class="pcert-org">
+              <div class="pcert-org-logo">LF</div>
+              <div>
+                <div class="pcert-org-name">The Linux Foundation</div>
+                <div class="pcert-code">LFD140</div>
+              </div>
+            </div>
+            <h3 class="pcert-title">GitHub for Open Standards Development</h3>
+            <div class="pcert-meta">
+              <div><span class="pcert-label">Student</span><span class="pcert-val">Harini D</span></div>
+              <div><span class="pcert-label">Completed</span><span class="pcert-val">2026</span></div>
+              <div><span class="pcert-label">Issuer</span><span class="pcert-val">Linux Foundation Education</span></div>
+            </div>
+            <div class="pcert-tags"><span>GitHub</span><span>Open Standards</span><span>DevOps</span></div>
+            <button class="pcert-btn" data-cert="1">View Certificate ↗</button>
+          </div>
+        </article>
+
+        <!-- CERT 3 — AWS -->
+        <article class="premium-cert-card tilt-card reveal-up aws-cert" data-cert="2" style="transition-delay:0.24s">
+          <div class="pcert-glow"></div>
+          <div class="pcert-status aws-status">✓ Earned</div>
+          <div class="pcert-thumb pcert-thumb-aws" role="button" tabindex="0" aria-label="View AWS Cloud Quest Badge" data-cert="2">
+            <img src="assets/certificates/aws-cloud-quest.jpg"
+                 onerror="this.src='assets/certificates/aws-placeholder.svg'"
+                 alt="AWS Cloud Quest Badge" loading="lazy" />
+            <div class="pcert-thumb-overlay"><span>🔍 View Badge</span></div>
+          </div>
+          <div class="pcert-body">
+            <div class="pcert-org">
+              <div class="pcert-org-logo aws-logo">AWS</div>
+              <div>
+                <div class="pcert-org-name">Amazon Web Services</div>
+                <div class="pcert-code">Cloud Quest</div>
+              </div>
+            </div>
+            <h3 class="pcert-title">AWS Cloud Practitioner Learning Badge</h3>
+            <div class="pcert-meta">
+              <div><span class="pcert-label">Student</span><span class="pcert-val">Harini D</span></div>
+              <div><span class="pcert-label">Program</span><span class="pcert-val">AWS Cloud Quest</span></div>
+              <div><span class="pcert-label">Level</span><span class="pcert-val">Cloud Practitioner</span></div>
+            </div>
+            <div class="pcert-tags"><span>AWS</span><span>Cloud</span><span>EC2</span><span>IAM</span></div>
+            <button class="pcert-btn aws-btn" data-cert="2">View Badge ↗</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══ CERT LIGHTBOX MODAL ══ -->
+    <div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" hidden>
+      <div class="cert-modal-backdrop"></div>
+      <div class="cert-modal-box">
+        <div class="cert-modal-toolbar">
+          <div class="cert-modal-title" id="cert-modal-title"></div>
+          <div class="cert-modal-actions">
+            <button class="cmbtn" id="cm-zoomin"    title="Zoom In">＋</button>
+            <button class="cmbtn" id="cm-zoomout"   title="Zoom Out">－</button>
+            <button class="cmbtn" id="cm-reset"     title="Reset">⊡</button>
+            <a      class="cmbtn" id="cm-download"  title="Download" download>⬇</a>
+            <button class="cmbtn cm-close" id="cm-close" title="Close (ESC)">✕</button>
+          </div>
+        </div>
+        <div class="cert-modal-imgwrap" id="cm-imgwrap">
+          <img id="cm-img" src="" alt="Certificate" draggable="false" />
+        </div>
+        <div class="cert-modal-footer" id="cm-footer"></div>
+      </div>
+    </div>
+
+    <!-- ══ ACHIEVEMENTS STATS ══ -->
+    <section class="section achievements-section">
+      <div class="section-header">
+        <span class="section-tag">05 · Achievements</span>
+        <h2 class="section-title">Numbers that<br /><span class="gradient-text">tell the story</span></h2>
+      </div>
+      <div class="achievements-grid">
+        <div class="ach-card glass-card reveal-up">
+          <strong class="counter" data-target="1">0</strong>
+          <span>Month Internship</span>
+        </div>
+        <div class="ach-card glass-card reveal-up">
+          <strong class="counter" data-target="3">0</strong>
+          <span>Major Projects</span>
+        </div>
+        <div class="ach-card glass-card reveal-up">
+          <strong class="counter" data-target="2">0</strong>
+          <span>Linux Foundation Certificates</span>
+        </div>
+        <div class="ach-card glass-card reveal-up">
+          <strong class="counter" data-target="1">0</strong>
+          <span>Open Source Contribution</span>
+        </div>
+        <div class="ach-card glass-card reveal-up">
+          <strong class="counter" data-target="1">0</strong>
+          <span>Merged Pull Request</span>
+        </div>
+        <div class="ach-card glass-card reveal-up">
+          <strong class="counter" data-target="1">0</strong>
+          <span>GitHub Pages Website</span>
+        </div>
+        <div class="ach-card glass-card reveal-up">
+          <strong class="counter" data-target="1">0</strong>
+          <span>DevSecOps Website</span>
+        </div>
+        <div class="ach-card glass-card highlight-card reveal-up">
+          <strong>AWS</strong>
+          <span>Cloud Learning Badge</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CONTACT ══ -->
+    <section id="contact" class="section contact-section">
+      <div class="section-header">
+        <span class="section-tag">06 · Contact</span>
+        <h2 class="section-title">Let's connect<br /><span class="gradient-text">and build together</span></h2>
+      </div>
+      <div class="contact-card glass-card reveal-zoom">
+        <div class="contact-card-glow" aria-hidden="true"></div>
+        <div class="contact-avatar" aria-hidden="true">
+          <img src="pic.png" onerror="this.onerror=null;this.src='assets/harini.svg'" alt="Harini D" />
+        </div>
+        <div class="contact-info">
+          <h3>Harini D</h3>
+          <p class="muted">Artificial Intelligence and Machine Learning</p>
+          <p class="muted">K.S.Rangasamy College of Technology</p>
+          <p class="muted" style="margin-top:0.5rem">MLOps Open-Source Contributor · iGradAI Labs</p>
+        </div>
+        <div class="contact-links">
+          <a href="https://github.com/mdharini172007-hash" target="_blank" rel="noopener noreferrer" class="contact-btn magnetic">
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/harini-dhandapani-9a367737b/" target="_blank" rel="noopener noreferrer" class="contact-btn magnetic">
+            <span>LinkedIn</span>
+          </a>
+          <a href="mailto:mdharini172007@gmail.com" class="contact-btn magnetic">
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+      <p class="footer-copy">Harini D </p>
+      <p class="footer-sub muted">Designed as a premium interactive experience · Deployed on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <!-- AOS Library -->
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

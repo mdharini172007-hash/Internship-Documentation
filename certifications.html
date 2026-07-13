@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications — Harini D</title>
+  <meta name="description" content="Professional certifications earned by Harini D during internship at iGradAI Labs." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cert-styles.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor-dot"  aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- BACKGROUND -->
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora-band aurora-1"></div>
+    <div class="aurora-band aurora-2"></div>
+    <div class="aurora-band aurora-3"></div>
+  </div>
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav-wrap">
+    <nav class="top-nav glass" aria-label="Primary navigation">
+      <a href="index.html" class="brand"><span class="brand-logo">HD</span></a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#timeline">Journey</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="certifications.html" class="active">Certs</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <a href="index.html" class="nav-cta">← Back</a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobile-menu" class="mobile-drawer glass">
+    <button class="drawer-close">✕</button>
+    <div class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+  <div class="drawer-overlay"></div>
+
+  <main class="cert-main">
+
+    <!-- HERO HEADER -->
+    <section class="cert-hero">
+      <div class="cert-hero-inner">
+        <div class="cert-hero-badge reveal-up">🏆 Professional Certifications</div>
+        <h1 class="cert-hero-title reveal-up">Verified <span class="gradient-text">Credentials</span></h1>
+        <p class="cert-hero-sub reveal-up">
+          The following certifications were successfully completed during my internship at
+          <strong>iGradAI Labs Private Limited</strong>. These certifications strengthened
+          my knowledge in GitHub workflows, Open Source Software Development, Cloud Computing,
+          and Professional Documentation.
+        </p>
+        <!-- Badges row -->
+        <div class="cert-badges reveal-up">
+          <span class="cert-badge-pill">🏅 Linux Foundation Certified</span>
+          <span class="cert-badge-pill">🏅 Open Source Development</span>
+          <span class="cert-badge-pill">🏅 GitHub Foundations</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERT STATS -->
+    <section class="cert-stats reveal-up">
+      <div class="cstat"><strong>2</strong><span>Certificates Earned</span></div>
+      <div class="cstat-div"></div>
+      <div class="cstat"><strong>1</strong><span>Organization</span></div>
+      <div class="cstat-div"></div>
+      <div class="cstat"><strong>2026</strong><span>Year Completed</span></div>
+      <div class="cstat-div"></div>
+      <div class="cstat"><strong>100%</strong><span>Completion Rate</span></div>
+    </section>
+
+    <!-- CERTIFICATES GRID -->
+    <section class="certs-section">
+      <div class="certs-grid">
+
+        <!-- CERT 1 -->
+        <article class="cert-card tilt-card reveal-up" data-index="0">
+          <div class="cert-card-glow"></div>
+          <div class="cert-status-badge">✓ Completed</div>
+
+          <!-- Thumbnail -->
+          <div class="cert-thumb" role="button" tabindex="0"
+               aria-label="View LFD102 Certificate"
+               data-cert="0">
+            <img src="assets/certificates/linux-foundation-lfd102.jpg"
+                 alt="LFD102 Certificate — A Beginner's Guide to Open Source Software Development"
+                 loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="view-icon">🔍 View Certificate</span>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="cert-body">
+            <div class="cert-org">
+              <div class="cert-org-logo lf-logo">LF</div>
+              <div>
+                <div class="cert-org-name">The Linux Foundation</div>
+                <div class="cert-course-code">LFD102</div>
+              </div>
+            </div>
+            <h3 class="cert-title">A Beginner's Guide to Open Source Software Development</h3>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">Student</span>
+                <span class="cert-meta-value">Harini D</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">Completed</span>
+                <span class="cert-meta-value">June 18, 2026</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">Credential ID</span>
+                <span class="cert-meta-value mono">LF-lunhmt6o9w</span>
+              </div>
+            </div>
+            <div class="cert-tags">
+              <span>Open Source</span><span>Linux</span><span>GitHub</span>
+            </div>
+            <button class="cert-view-btn" data-cert="0">
+              <span>View Certificate</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- CERT 2 -->
+        <article class="cert-card tilt-card reveal-up" data-index="1" style="transition-delay:0.15s">
+          <div class="cert-card-glow"></div>
+          <div class="cert-status-badge">✓ Completed</div>
+
+          <div class="cert-thumb" role="button" tabindex="0"
+               aria-label="View LFD140 Certificate"
+               data-cert="1">
+            <img src="assets/certificates/linux-foundation-lfd140.jpg"
+                 alt="LFD140 Certificate — GitHub for Open Standards Development"
+                 loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="view-icon">🔍 View Certificate</span>
+            </div>
+          </div>
+
+          <div class="cert-body">
+            <div class="cert-org">
+              <div class="cert-org-logo lf-logo">LF</div>
+              <div>
+                <div class="cert-org-name">The Linux Foundation</div>
+                <div class="cert-course-code">LFD140</div>
+              </div>
+            </div>
+            <h3 class="cert-title">GitHub for Open Standards Development</h3>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">Student</span>
+                <span class="cert-meta-value">Harini D</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">Completed</span>
+                <span class="cert-meta-value">2026</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">Issuer</span>
+                <span class="cert-meta-value">Linux Foundation Education</span>
+              </div>
+            </div>
+            <div class="cert-tags">
+              <span>GitHub</span><span>Open Standards</span><span>DevOps</span>
+            </div>
+            <button class="cert-view-btn" data-cert="1">
+              <span>View Certificate</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ LIGHTBOX MODAL ══ -->
+  <div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" aria-label="Certificate Viewer" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
+      <div class="modal-toolbar">
+        <div class="modal-title" id="modal-title"></div>
+        <div class="modal-actions">
+          <button class="modal-btn" id="btn-zoom-in"  aria-label="Zoom in">＋</button>
+          <button class="modal-btn" id="btn-zoom-out" aria-label="Zoom out">－</button>
+          <button class="modal-btn" id="btn-reset"    aria-label="Reset zoom">⊡</button>
+          <a class="modal-btn download-btn" id="btn-download" download aria-label="Download">⬇</a>
+          <button class="modal-btn close-btn" id="btn-close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="modal-img-wrap" id="modal-img-wrap">
+        <img id="modal-img" src="" alt="Certificate" draggable="false" />
+      </div>
+      <div class="modal-footer" id="modal-footer"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">HD</div>
+      <p class="footer-copy">Harini D · Certifications · 2026</p>
+      <p class="footer-sub muted">iGradAI Labs Private Limited Internship</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+  <script src="cert-script.js"></script>
+</body>
+</html>

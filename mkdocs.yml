@@ -1,0 +1,81 @@
+site_name: Professional Portfolio & Internship Journey
+site_description: A comprehensive documentation of professional growth, technical skills, and internship achievements
+site_author: Professional Developer
+site_url: http://127.0.0.1:8000/
+
+nav:
+  - 🏠 Home: index.md
+  - � About Me: about-me.md
+  - 🏢 Internship: internship-overview.md
+  - 📖 Learning Journey: learning-journey.md
+  - 🌍 Open Source Contribution: open-source.md
+  - 💻 Projects: projects.md
+  - ☁ Cloud Learning: cloud-learning.md
+  - ⚙ GitHub Workflow: github-devops.md
+  - 🏆 Certifications: certifications.md
+  - 📑 Documentation: documentation.md
+  - 📊 Achievements: achievements.md
+  - 📞 Contact: contact.md
+  - 📄 Conclusion: conclusion.md
+
+theme:
+  name: material
+  language: en
+  direction: ltr
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+    - scheme: default
+      primary: deep purple
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - navigation.top
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+docs_dir: Internship-Documentation/docs
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com
+      name: LinkedIn
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com
+      name: Twitter
+
+markdown_extensions:
+  - pymdownx.arithmatex
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.magiclink
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html

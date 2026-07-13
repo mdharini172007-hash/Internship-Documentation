@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+{% endblock %}
+
+{% block extrahead %}
+  <meta name="theme-color" content="#050816" />
+{% endblock %}
+
+{% block content %}
+  <!-- Neural Network Canvas -->
+  <canvas id="hd-neural" aria-hidden="true" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+
+  <!-- Aurora Blobs -->
+  <div aria-hidden="true" style="position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;">
+    <div class="hd-blob hd-blob-1"></div>
+    <div class="hd-blob hd-blob-2"></div>
+    <div class="hd-blob hd-blob-3"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="hd-cursor-dot"  aria-hidden="true"></div>
+  <div class="hd-cursor-ring" aria-hidden="true"></div>
+
+  {{ super() }}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+{% endblock %}
