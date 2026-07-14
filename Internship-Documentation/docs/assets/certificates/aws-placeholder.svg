@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0a0a15"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9900"/>
+      <stop offset="100%" style="stop-color:#FF6600"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)" rx="300"/>
+  <circle cx="300" cy="300" r="260" fill="none" stroke="url(#ring)" stroke-width="8" opacity="0.6"/>
+  <circle cx="300" cy="300" r="220" fill="none" stroke="rgba(255,153,0,0.2)" stroke-width="2"/>
+  <!-- AWS Logo area -->
+  <rect x="170" y="220" width="260" height="80" rx="12" fill="rgba(255,153,0,0.15)" stroke="rgba(255,153,0,0.4)" stroke-width="1"/>
+  <text x="300" y="272" font-family="Arial Black" font-size="42" fill="#FF9900" text-anchor="middle" font-weight="900">AWS</text>
+  <!-- Badge text -->
+  <text x="300" y="340" font-family="Arial" font-size="16" fill="rgba(255,255,255,0.7)" text-anchor="middle">Cloud Quest</text>
+  <text x="300" y="368" font-family="Arial Black" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="700">Cloud Practitioner</text>
+  <!-- Name -->
+  <text x="300" y="420" font-family="Georgia" font-size="18" fill="rgba(255,153,0,0.9)" text-anchor="middle">Harini D</text>
+  <!-- Stars -->
+  <text x="220" y="460" font-size="20" text-anchor="middle">⭐</text>
+  <text x="300" y="460" font-size="20" text-anchor="middle">⭐</text>
+  <text x="380" y="460" font-size="20" text-anchor="middle">⭐</text>
+</svg>

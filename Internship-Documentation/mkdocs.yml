@@ -19,7 +19,7 @@ nav:
 
 theme:
   name: material
-  custom_dir: ../overrides
+  custom_dir: overrides
   language: en
   palette:
     - scheme: slate
@@ -41,10 +41,10 @@ theme:
     repo: fontawesome/brands/github
 
 extra_css:
-  - stylesheets/extra.css
+  - assets/css/custom.css
 
 extra_javascript:
-  - javascripts/portfolio.js
+  - assets/js/custom.js
 
 docs_dir: docs
 

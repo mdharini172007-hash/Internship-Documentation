@@ -1,8 +1,17 @@
-# Internship Documentation
+# Harini D — AI & ML Portfolio
 
-This folder contains the documentation structure for your internship project.
+Premium internship documentation portfolio built with MkDocs Material.
+
+## Setup
+`ash
+pip install -r requirements.txt
+mkdocs serve
+`
+
+## Deploy
+Push to main branch — GitHub Actions auto-deploys.
 
 ## Structure
-
-- docs/ - Markdown pages for the documentation site
-- mkdocs.yml - MkDocs configuration
+- docs/ — Markdown content
+- docs/assets/ — CSS, JS, images, certificates, badges
+- overrides/ — Custom MkDocs templates
