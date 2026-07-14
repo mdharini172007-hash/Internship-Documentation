@@ -382,24 +382,17 @@ document.querySelectorAll('.glass-card').forEach((card) => {
 ══════════════════════════════════════════ */
 (function () {
   const CERTS = [
-    {
-      src:   'assets/certificates/linux-foundation-lfd102.jpg',
-      fallback: 'assets/certificates/placeholder.svg',
-      title: 'LFD102 — A Beginner\'s Guide to Open Source Software Development',
-      footer: 'The Linux Foundation · June 18, 2026 · Credential: LF-lunhmt6o9w',
-    },
-    {
-      src:   'assets/certificates/linux-foundation-lfd140.jpg',
-      fallback: 'assets/certificates/placeholder.svg',
-      title: 'LFD140 — GitHub for Open Standards Development',
-      footer: 'The Linux Foundation · 2026 · Linux Foundation Education',
-    },
-    {
-      src:   'assets/certificates/aws-cloud-quest.jpg',
-      fallback: 'assets/certificates/aws-placeholder.svg',
-      title: 'AWS Cloud Practitioner Learning Badge — Cloud Quest',
-      footer: 'Amazon Web Services · AWS Cloud Quest · Cloud Practitioner Level',
-    },
+    { src:'assets/certificates/lfd102.jpg',       fallback:'assets/certificates/placeholder.svg',     title:'LFD102 — A Beginner\'s Guide to Open Source Software Development', footer:'The Linux Foundation · June 18, 2026 · Credential: LF-lunhmt6o9w' },
+    { src:'assets/certificates/lfd140.jpg',       fallback:'assets/certificates/placeholder.svg',     title:'LFD140 — GitHub for Open Standards Development',                   footer:'The Linux Foundation · 2026' },
+    { src:'assets/certificates/n8n-essentials.jpg',   fallback:'assets/certificates/placeholder.svg', title:'n8n Essentials — Your First Workflows',                            footer:'n8n Academy · 2026' },
+    { src:'assets/certificates/n8n-ai-testing.jpg',   fallback:'assets/certificates/placeholder.svg', title:'In Practice — AI Testing & Best Practices',                        footer:'n8n Academy · 2026' },
+    { src:'assets/certificates/n8n-integrations.jpg', fallback:'assets/certificates/placeholder.svg', title:'Integrations — API & Connected Workflows',                         footer:'n8n Academy · 2026' },
+    { src:'assets/certificates/n8n-quickstart.jpg',   fallback:'assets/certificates/placeholder.svg', title:'n8n Quickstart',                                                   footer:'n8n Academy · 2026' },
+    { src:'assets/badges/ai-testing.jpg',         fallback:'assets/certificates/placeholder.svg',     title:'AI Testing Badge',                                                 footer:'n8n · 2026' },
+    { src:'assets/badges/aws.jpg',                fallback:'assets/certificates/aws-placeholder.svg', title:'AWS Cloud Practitioner Badge',                                     footer:'Amazon Web Services · 2026' },
+    { src:'assets/badges/n8n-essentials.jpg',     fallback:'assets/certificates/placeholder.svg',     title:'n8n Essentials Badge',                                             footer:'n8n · 2026' },
+    { src:'assets/badges/n8n-integrations.jpg',   fallback:'assets/certificates/placeholder.svg',     title:'n8n Integrations Badge',                                           footer:'n8n · 2026' },
+    { src:'assets/badges/n8n-quickstart.jpg',     fallback:'assets/certificates/placeholder.svg',     title:'n8n Quickstart Badge',                                             footer:'n8n · 2026' },
   ];
 
   const modal    = document.getElementById('cert-modal');
