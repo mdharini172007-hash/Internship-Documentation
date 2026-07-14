@@ -1229,20 +1229,20 @@ main { position: relative; z-index: 2; }
 
 /* ══ CERT LIGHTBOX MODAL ══ */
 .cert-modal {
-  position: fixed; inset: 0; z-index: 9990;
+  position: fixed; inset: 0; z-index: 99999;
   display: flex; align-items: center; justify-content: center;
   padding: 1rem;
 }
-.cert-modal[hidden] { display: none; }
+.cert-modal[hidden] { display: none !important; }
 .cert-modal-backdrop {
-  position: fixed; inset: 0;
-  background: rgba(2,4,14,0.96); backdrop-filter: blur(28px);
+  position: fixed; inset: 0; z-index: 0;
+  background: rgba(2,4,14,0.97); backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
 }
 .cert-modal-box {
   position: relative; z-index: 1;
   width: min(1100px, 98vw);
-  height: min(92vh, 860px);
+  height: min(88vh, 860px);
   border-radius: 20px;
   background: rgba(8,12,28,0.98);
   border: 1px solid rgba(255,255,255,0.13);
@@ -1474,3 +1474,32 @@ main { position: relative; z-index: 2; }
   letter-spacing: 0.04em !important;
   gap: 0.3rem !important;
 }
+
+/* ── Download & Close — explicit sizing ── */
+.cmbtn-download {
+  width: auto !important; min-width: 110px;
+  padding: 0 1rem !important;
+  font-size: 0.82rem !important; font-weight: 700 !important;
+  background: rgba(6,182,212,0.15) !important;
+  border-color: rgba(6,182,212,0.4) !important;
+  color: #22D3EE !important;
+}
+.cmbtn-download:hover {
+  background: rgba(6,182,212,0.3) !important;
+  border-color: rgba(6,182,212,0.7) !important;
+}
+.cmbtn-close {
+  width: auto !important; min-width: 90px;
+  padding: 0 1rem !important;
+  font-size: 0.82rem !important; font-weight: 700 !important;
+  background: rgba(239,68,68,0.12) !important;
+  border-color: rgba(239,68,68,0.35) !important;
+  color: #FCA5A5 !important;
+}
+.cmbtn-close:hover {
+  background: rgba(239,68,68,0.3) !important;
+  border-color: rgba(239,68,68,0.65) !important;
+  color: #fff !important;
+}
+/* Ensure nav never covers modal */
+.nav-wrap { z-index: 100 !important; }
