@@ -436,8 +436,8 @@ document.querySelectorAll('.glass-card').forEach((card) => {
     img.src = '';
   }
 
-  // Triggers — both thumb and button
-  document.querySelectorAll('[data-cert]').forEach((el) => {
+  // Triggers — thumb, button, badge-img-wrap மட்டும்
+  document.querySelectorAll('.pcert-thumb[data-cert], .pcert-btn[data-cert], .badge-img-wrap[data-cert]').forEach((el) => {
     el.addEventListener('click', () => open(+el.dataset.cert));
     el.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(+el.dataset.cert); }
